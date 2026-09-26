@@ -49,12 +49,14 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent-2); out
 .journey-phase h3 { font-size: .94rem; overflow-wrap: anywhere; }
 .journey-phase p:last-child { margin-bottom: 0; font-size: .82rem; line-height: 1.4; }
 .journey-phase.state-completed { border-left: 4px solid var(--accent); }
-.journey-phase.state-current { border: 2px solid var(--accent-2); box-shadow: 0 0 0 2px #f0c77b18; }
+.journey-phase.state-current { border: 3px solid var(--accent-2); background: linear-gradient(160deg, #202b43, #141d30); box-shadow: 0 0 0 2px #f0c77b18; }
+.journey-phase.state-current .state-label { color: var(--accent-2); }
 .journey-phase.state-known-future { border-left: 4px solid var(--accent-3); }
 .journey-phase.state-exploratory { border-style: dashed; }
 .journey-phase.state-uncharted { border-style: dotted; background: transparent; }
 
-.milestone { display: flex; flex-direction: column; justify-content: space-between; border-color: #556988; background: linear-gradient(135deg, #172641, #11182a); }
+.milestone { display: flex; flex-direction: column; justify-content: flex-start; border-color: #556988; background: linear-gradient(135deg, #172641, #11182a); }
+.hero-progress { margin-top: .65rem; }
 .hero-value { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .5rem; }
 .hero-value strong { font-size: clamp(2.7rem, 5vw, 4.8rem); letter-spacing: -.055em; }
 .hero-value span { color: var(--accent-2); font-size: clamp(1.25rem, 2.4vw, 1.8rem); }
