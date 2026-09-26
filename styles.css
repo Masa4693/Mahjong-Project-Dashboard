@@ -57,9 +57,15 @@ a:focus-visible, summary:focus-visible { outline: 3px solid var(--accent-2); out
 
 .milestone { display: flex; flex-direction: column; justify-content: flex-start; border-color: #556988; background: linear-gradient(135deg, #172641, #11182a); }
 .hero-progress { margin-top: .65rem; }
-.hero-value { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: .5rem; }
+.progress-overview { display: grid; grid-template-columns: minmax(7.5rem, .8fr) minmax(0, 1fr); align-items: center; gap: .65rem; margin-bottom: .7rem; }
+.progress-donut { display: block; width: 100%; max-width: 10rem; margin-inline: auto; overflow: visible; }
+.donut-track, .donut-value { fill: none; stroke-width: 12; }
+.donut-track { stroke: #34435d; }
+.donut-value { stroke: var(--accent); stroke-linecap: round; transform: rotate(-90deg); transform-origin: center; }
+.progress-donut text { fill: #fff; font-size: 1.05rem; font-weight: 800; }
+.hero-value { display: flex; align-items: flex-start; flex-direction: column; gap: .25rem; margin: 0; }
 .hero-value strong { font-size: clamp(2.7rem, 5vw, 4.8rem); letter-spacing: -.055em; }
-.hero-value span { color: var(--accent-2); font-size: clamp(1.25rem, 2.4vw, 1.8rem); }
+.hero-value span { color: var(--muted); font-size: .8rem; font-weight: 700; }
 .progress-segments { display: grid; grid-template-columns: repeat(11, 1fr); gap: .25rem; margin: .65rem 0; }
 .progress-segment { height: 1.85rem; border: 1px solid #53627b; border-radius: .25rem; background: #0d1423; }
 .progress-segment.is-complete { border-color: var(--accent); background: repeating-linear-gradient(135deg, #317c69, #317c69 6px, #3a9279 6px, #3a9279 12px); }
@@ -165,6 +171,7 @@ footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line);
   .journey-list, .card-grid, .activity-grid { grid-template-columns: 1fr; }
   .journey-phase { min-height: 0; }
   .hero-value { align-items: flex-start; flex-direction: column; gap: .2rem; }
+  .progress-overview { grid-template-columns: minmax(6.5rem, .72fr) minmax(0, 1fr); }
   .progress-segments { gap: .18rem; }
   .progress-segment { height: 1.55rem; }
   .trend-panel { padding: .7rem; }
